@@ -1,0 +1,1 @@
+from .gittoc import main
