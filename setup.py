@@ -18,7 +18,7 @@ def read(fname):
 
 
 setup(name='git-toc',
-      version='0.0.1',
+      version='0.1.0',
       description=DESCRIPTION,
       long_description=read('README.md'),
       author=OWNER_NAMES,
