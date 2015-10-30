@@ -15,10 +15,15 @@ def parse_git_md(md_filename, md_add_toc=False):
                 hx = len(header)    # if h1, h2, h3, h4...
                 # print m.groups(), hx, header
                 header_text = m.group(2)
-                header_mangled = re.sub("[^a-zA-Z0-9 ]", "", header_text).replace(' ','-').lower()
-                toc_line = "  " * hx + "* [%s](#%s)"% (header_text, header_mangled.lower())
+                toc_line = mangle_header(header_text, hx)
                 toc.append(toc_line)
                 print toc_line
+
+def mangle_header(header_text, header_depth):
+    header_text_strip = re.sub("[^a-zA-Z0-9- ]", "", header_text)
+    header_text_no_spaces = header_text_strip.replace(' ','-').lower()
+    result = "  " * (header_depth-1) + "* [%s](#%s)"% (header_text, header_text_no_spaces.lower())
+    return result
 
 
 def main():
