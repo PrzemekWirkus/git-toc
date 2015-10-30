@@ -28,6 +28,7 @@ setup(name='git-toc',
       url='https://github.com/PrzemekWirkus/git-toc',
       packages=find_packages(),
       license="Apache-2.0",
+      test_suite = 'test',
       entry_points={
         "console_scripts": [
             "gittoc=gittoc:main",
