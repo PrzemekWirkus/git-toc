@@ -1,3 +1,9 @@
+#Table of content
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+  * [Example](#example)
+
 # Description
 Generates super simple TOC (Table of Content) for git MD files. 
 
