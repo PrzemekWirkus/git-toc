@@ -11,7 +11,13 @@ $ cd git-toc
 $ python setup.py install
 ```
 
-## Usage
+# Usage
+Below command will print TOC which you can embed to e.g. ```README.md```.
+```
+$ gittoc -f <file>
+```
+
+## Example
 ```
 $ gittoc.exe -f TESTING.md
   * [Mbed SDK automated test suite](#mbed-sdk-automated-test-suite)
