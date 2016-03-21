@@ -7,7 +7,7 @@ import os
 from distutils.core import setup
 from setuptools import find_packages
 
-DESCRIPTION = ""
+DESCRIPTION = "Tool to generates TOC for git markdown"
 OWNER_NAMES = 'Przemyslaw Wirkus'
 OWNER_EMAILS = 'Przemyslaw.Wirkus@arm.com'
 
