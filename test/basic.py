@@ -33,6 +33,12 @@ class GitTocBasicTestCase(unittest.TestCase):
         self.assertEqual(mangle_header("Revision 3 - duration v0.0.1", 1), "* [Revision 3 - duration v0.0.1](#revision-3---duration-v001)")
         self.assertEqual(mangle_header("Retrospective in 3 [sec.]", 1), "* [Retrospective in 3 [sec.]](#retrospective-in-3-sec)")
 
+    def test_smoke_tests_labels_underscore_char(self):
+        self.assertEqual(mangle_header("Return result after __exit", 1), "* [Return result after __exit](#return-result-after-__exit)")
+        self.assertEqual(mangle_header("Parsing text received from DUT (line by line)", 1), "* [Parsing text received from DUT (line by line)](#parsing-text-received-from-dut-line-by-line)")
+        self.assertEqual(mangle_header("Before Greentea v0.2.0", 1), "* [Before Greentea v0.2.0](#before-greentea-v020)")
+        self.assertEqual(mangle_header("Using __rdx_line event", 1), "* [Using __rdx_line event](#using-__rdx_line-event)")
+
     def test_headers_depth_1(self):
         self.assertEqual(
             mangle_header("Example 2 - digest directly from file", 1),

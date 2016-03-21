@@ -20,7 +20,7 @@ def parse_git_md(md_filename, md_add_toc=False):
                 print toc_line
 
 def mangle_header(header_text, header_depth):
-    header_text_strip = re.sub("[^a-zA-Z0-9- ]", "", header_text)
+    header_text_strip = re.sub("[^a-zA-Z0-9-_ ]", "", header_text)
     header_text_no_spaces = header_text_strip.replace(' ','-').lower()
     result = "  " * (header_depth-1) + "* [%s](#%s)"% (header_text, header_text_no_spaces.lower())
     return result
