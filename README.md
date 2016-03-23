@@ -1,15 +1,55 @@
-#Table of content
+#Table of Contents
+
 * [Description](#description)
-* [Installation](#installation)
+  * [Dependencies](#dependencies)
+  * [Example usage](#example-usage)
+* [Installation from PyPI (preferred)](#installation-from-pypi-preferred)
+* [Installation from sources](#installation-from-sources)
 * [Usage](#usage)
   * [Example](#example)
 
 # Description
-Generates super simple TOC (Table of Content) for git MD files. 
+Generates super simple TOC (Table of Content) for [GitHub markdown language](https://guides.github.com/features/mastering-markdown/) documents.
 
-# Installation
+## Dependencies
+
+* Python 2.7.
+* ```pip``` for installation procedure.
+
+## Example usage
 ```
-$ git clone <repo>
+$ gittoc -f README.md
+```
+```
+* [greentea-client](#greentea-client)
+  * [mbed-drivers dependencies](#mbed-drivers-dependencies)
+  * [Greentea test tools](#greentea-test-tools)
+  * [Compatibility](#compatibility)
+    * [Greentea support](#greentea-support)
+    * [utest support](#utest-support)
+    * [greentea-client support in your module](#greentea-client-support-in-your-module)
+  * [Terms](#terms)
+    * [Test suite](#test-suite)
+    * [Test case](#test-case)
+    * [key-value protocol](#key-value-protocol)
+  * [Where can I use it?](#where-can-i-use-it)
+* [Test suite model](#test-suite-model)
+  * [utest support template](#utest-support-template)
+  * [No utest support template](#no-utest-support-template)
+```
+
+# Installation from PyPI (preferred)
+
+This application is released with PyPI so you can use ```pip``` to install it on your host.
+
+```
+$ pip install git-toc --upgrade
+```
+
+# Installation from sources
+
+```
+$ git clone https://github.com/PrzemekWirkus/git-toc.git
 ```
 
 ```
@@ -18,14 +58,16 @@ $ python setup.py install
 ```
 
 # Usage
-Below command will print TOC which you can embed to e.g. ```README.md```.
+Below command will print on the screen TOC extracted from file specified with switch ```-f``` which you can embed to TOC section of your ```README.md``` document.
 ```
-$ gittoc -f <file>
+$ gittoc -f <file-name>
 ```
 
 ## Example
 ```
 $ gittoc.exe -f TESTING.md
+```
+```
   * [Mbed SDK automated test suite](#mbed-sdk-automated-test-suite)
     * [Introduction](#introduction)
     * [What is host test?](#what-is-host-test)
