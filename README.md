@@ -11,11 +11,6 @@
 # Description
 Generates super simple TOC (Table of Content) for [GitHub markdown language](https://guides.github.com/features/mastering-markdown/) documents.
 
-## Dependencies
-
-* Python 2.7.
-* ```pip``` for installation procedure.
-
 ## Example usage
 ```
 $ gittoc -f README.md
