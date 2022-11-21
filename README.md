@@ -1,7 +1,6 @@
 #Table of Contents
 
 * [Description](#description)
-  * [Dependencies](#dependencies)
   * [Example usage](#example-usage)
 * [Installation from PyPI (preferred)](#installation-from-pypi-preferred)
 * [Installation from sources](#installation-from-sources)
