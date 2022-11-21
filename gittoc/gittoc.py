@@ -17,7 +17,7 @@ def parse_git_md(md_filename, md_add_toc=False):
                 header_text = m.group(2)
                 toc_line = mangle_header(header_text, hx)
                 toc.append(toc_line)
-                print toc_line
+                print (toc_line)
 
 def mangle_header(header_text, header_depth):
     header_text_strip = re.sub("[^a-zA-Z0-9-_ ]", "", header_text)
